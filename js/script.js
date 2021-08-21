@@ -13,6 +13,7 @@ function memoryCost(increase) {
     document.getElementById("memory-two").disabled = false;
     document.getElementById("memory-one").disabled = true;
   }
+  promoTotal();
 }
 // function for storage cost
 function storageCost(storage) {
@@ -41,6 +42,7 @@ function storageCost(storage) {
     storageTwo.disabled = false;
     storagethree.disabled = true;
   }
+  promoTotal();
 }
 // function for delivary cost
 function delivaryCost(early) {
@@ -69,7 +71,16 @@ function delivaryCost(early) {
     freeDelivary.disabled = false;
     earlyDelivary.disabled = true;
   }
+  promoTotal();
 }
+// function for promocode start
+function promoTotal() {
+  const getPromoTotal = document.getElementById("promo-total");
+  const getTotalCost = document.getElementById("total-cost");
+  getPromoTotal.innerText = parseFloat(getTotalCost.innerText);
+}
+
+// function for promocode end
 // memory formulas
 document.getElementById("memory-two").addEventListener("click", function () {
   memoryCost(true);
@@ -96,3 +107,14 @@ document
   .addEventListener("click", function () {
     delivaryCost(true);
   });
+document.getElementById("apply-promo").addEventListener("click", function () {
+  const getPromoInput = document.getElementById("promo-input");
+  const getPromoTotal = document.getElementById("promo-total");
+  const discount = parseInt(getPromoTotal.innerText) * (20 / 100);
+  // const PromoTotal = promoTotal();
+  console.log(typeof getpromoTotal);
+  if (getPromoInput.value == "stevekaku") {
+    getPromoTotal.innerText = parseInt(getPromoTotal.innerText) - discount;
+  }
+  getPromoInput.value = "";
+});

@@ -79,8 +79,11 @@
             <!-- promocode division -->
             <div class="my-5">
               <h5>Add Promo code</h5>
-              <input type="text" />
-              <button class="bg-danger text-light p-1 px-3 rounded-3">
+              <input id="promo-input" type="text" />
+              <button
+                id="apply-promo"
+                class="bg-danger text-light p-1 px-3 rounded-3"
+              >
                 Apply
               </button>
             </div>
@@ -90,7 +93,7 @@
       <section class="container text-center my-3">
         <hr />
         <div class="">
-          <h2>Total:$<span>1299</span></h2>
+          <h2>Total:$<span id="promo-total">1299</span></h2>
         </div>
       </section>
     </main>
