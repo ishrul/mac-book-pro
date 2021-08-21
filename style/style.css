@@ -1,0 +1,11 @@
+.hr {
+  border: 2px solid black;
+}
+button {
+  background-color: transparent;
+  border-radius: 5px !important;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
