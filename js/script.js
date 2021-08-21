@@ -73,14 +73,13 @@ function delivaryCost(early) {
   }
   promoTotal();
 }
-// function for promocode start
+// function for lastTotal start
 function promoTotal() {
   const getPromoTotal = document.getElementById("promo-total");
   const getTotalCost = document.getElementById("total-cost");
   getPromoTotal.innerText = parseFloat(getTotalCost.innerText);
 }
-
-// function for promocode end
+// function for lastTotal end
 // memory formulas
 document.getElementById("memory-two").addEventListener("click", function () {
   memoryCost(true);
